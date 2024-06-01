@@ -22,7 +22,7 @@ export default function Footer() {
     setDynamicServerValue(result1);
     setTimeout(() => {
       router.push("/profile");
-    }, 1000);
+    }, 0);
   };
 
   return (
