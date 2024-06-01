@@ -4,7 +4,7 @@ import Subjects from "./home/subjects";
 
 async function getSubjects() {
   try {
-    subjectsResponse = await fetch(
+    const subjectsResponse = await fetch(
       `${process.env.NEXT_PUBLIC_BE_API_SERVER}/subjects`
     );
     if (!subjectsResponse.ok) {
