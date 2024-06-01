@@ -2,7 +2,7 @@ import CLink from "@/common/components/link";
 
 export default async function Subject({ params }) {
   const moduleDetailsResponse = await fetch(
-    `http://localhost:3000/api/items/${params.name}`
+    `${process.env.NEXT_PUBLIC_FE_API_SERVER}/items/${params.name}`
   );
   const moduleDetails = await moduleDetailsResponse.json();
 
