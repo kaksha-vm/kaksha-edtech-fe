@@ -1,5 +1,6 @@
 "use client";
 
+import CButton from "@/common/components/button";
 import { useRouter } from "next/navigation";
 
 export default function Profile() {
@@ -11,7 +12,7 @@ export default function Profile() {
   return (
     <div>
       <p>Welcome to Profile Page - client side</p>
-      <button onClick={redirectToHome}>Goto Home</button>
+      <CButton onClick={redirectToHome}>Goto Home</CButton>
     </div>
   );
 }

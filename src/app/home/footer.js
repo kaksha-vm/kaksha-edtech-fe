@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { foo1 } from "../actions";
 import { useRouter } from "next/navigation";
+import CButton from "@/common/components/button";
 
 export default function Footer() {
   const [dynamicServerValue, setDynamicServerValue] = useState("");
@@ -18,8 +19,6 @@ export default function Footer() {
   }, []);
 
   const updateDynamicServerValue = async () => {
-    const result1 = await foo1("afterClick");
-    setDynamicServerValue(result1);
     setTimeout(() => {
       router.push("/profile");
     }, 0);
@@ -33,13 +32,7 @@ export default function Footer() {
         {dynamicServerValue.name}
       </p> */}
 
-      <button
-        onClick={updateDynamicServerValue}
-        style={{ margin: "10px", padding: "5px" }}
-      >
-        Goto Profile
-      </button>
-      {/* <CLink label="Learning Module" href={"/s/java"} /> */}
+      <CButton onClick={updateDynamicServerValue}>Goto Profile</CButton>
     </div>
   );
 }
