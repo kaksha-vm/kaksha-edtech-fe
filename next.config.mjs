@@ -2,10 +2,15 @@
 const nextConfig = {
   async rewrites() {
     return [
-      // {
-      //   source: "/api/:path*",
-      //   destination: "http://localhost:8080/:path*",
-      // },
+      {
+        source: "/java",
+        destination: "https://sites.google.com/kaksha.dev/easylearn/home",
+      },
+      {
+        source: "/java/:path*",
+        destination:
+          "https://sites.google.com/kaksha.dev/easylearn/home/:path*",
+      },
     ];
   },
 };

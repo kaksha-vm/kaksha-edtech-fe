@@ -32,6 +32,13 @@ export default function Footer() {
         {dynamicServerValue.name}
       </p> */}
 
+      <CButton
+        onClick={() => {
+          router.push("/java");
+        }}
+      >
+        Goto Java
+      </CButton>
       <CButton onClick={updateDynamicServerValue}>Goto Profile</CButton>
     </div>
   );
